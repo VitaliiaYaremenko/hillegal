@@ -1,0 +1,76 @@
+.service-area {
+
+    &__container {
+        @media screen and (min-width: $breakpoint-md) {
+            max-width: 768px;
+            padding: 0 60px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            max-width: 1024px;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            max-width: 1740px;
+            padding: 0 180px;
+        }
+        @media screen and (min-width: $breakpoint-xxl) {
+            max-width: 2220px;
+            padding: 0 280px;
+        }
+    }
+
+    &__title {
+        padding-top: 30px;
+        border-top: 4px solid $border-color;
+        color: $basic-white;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+}
+
+.area {
+
+    &__item {
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        column-gap: 60px;
+        padding-left: 10px;
+        :nth-child(4) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            :nth-child(4) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__list {
+        color: $basic-white;
+        font-size: 18px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -8px;
+            width: 6px;
+            height: 6px;
+            background: $accent-color;
+            border-radius: $radius-rounded;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 35%;
+        }
+    }
+}
+
+
+

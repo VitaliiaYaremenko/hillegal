@@ -1,0 +1,77 @@
+.ecommerce {
+    margin-bottom: 30px;
+    @media screen and (min-width: $breakpoint-md) {
+        margin-bottom: 60px;
+    }
+
+
+    &__container {
+        text-align: center;
+    @media screen and (min-width: $breakpoint-md) {
+            max-width: 768px;
+            padding: 0 60px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+            max-width: 964px;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+            max-width: 1680px;
+            padding: 0 180px;
+    }
+    @media screen and (min-width: $breakpoint-xxl) {
+            max-width: 2160px;
+            padding: 0 280px;
+    }
+}
+
+    &__card {
+        @include flex-center;
+        flex-flow: column;
+        gap: 28px;
+        margin-bottom: 28px;
+    }
+
+    &__card-icon {
+        width: 92px;
+        height: 92px;
+        fill: $basic-white;
+    }
+
+    &__card-desc {
+        color: $basic-white;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    &__btn {
+        cursor: pointer;
+        border: none;
+        border-radius: $radius-md;
+        padding: 18px 30px;
+        background: $regular-color;
+        box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+        font-size: 16px;
+        font-weight: 700;
+        color: $basic-white;
+
+        &:hover {
+            background: $hover-coolor;
+        }
+
+        &:active {
+            background: $active-color;
+        }
+    }
+}
+
+.ecommercec {
+
+    &__card-title {
+        @include main-gradient-text ($gradient-red-text);
+        @include mobile-title ($gradient-red-text);
+        @media screen and (min-width: $breakpoint-md) {
+            @include title($gradient-red-text);
+        }
+    }
+}
