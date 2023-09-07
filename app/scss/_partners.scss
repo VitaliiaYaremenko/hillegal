@@ -22,16 +22,15 @@
             flex-wrap: wrap;
         }
         @media screen and (min-width: $breakpoint-xxl) {
-            max-width: 1860px;
+            max-width: 1720px;
             margin: 0 auto;
-            padding: 0 100px;
-            border-radius: $radius-sm;
+            border-radius: $radius-md;
         }
     }
 
     &__list {
         @include flex-center;
-        padding: 40px 80px;
+        height: 120px;
         flex: 1 1 100%;
 
         @media screen and (min-width: $breakpoint-md) {
@@ -49,7 +48,7 @@
             background: #143646;
         }
         &:nth-child(3) {
-            background: linear-gradient(0deg, #F48B30 0%, #F48B30 100%), #F48B30;
+            background: #F48B30;
         }
         &:nth-child(4) {
             background: #9E4DC3;

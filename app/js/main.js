@@ -30,12 +30,34 @@
 	})
 })();
 
+
+const teamslaider = document. querySelector ('.team__swiper')
+if (teamslaider) {
+	console.log(teamslaider)
 const teamswiper = new Swiper('.team__swiper', {
 	direction: 'horizontal',
 	spaceBetween: 30,
 	pagination: {
     el: '.team__swiper-pagination',
 	},
-	mousewheel: true,
 });
+}
+
+const swiper = new Swiper('.about__swiper', {
+	loop: false,
+	slidesPerView: 1,
+	pagination: {
+	el: '.about__swiper-pagination',
+	type: "bullets",
+	},
+	breakpoints: {
+		// desktop >= 991
+		648: {
+		slidesPerView: 4,
+		spaceBetween: 40,
+		}
+	}
+});
+
+
 

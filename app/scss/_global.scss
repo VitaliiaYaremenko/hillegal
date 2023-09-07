@@ -19,6 +19,7 @@ body {
     border-radius: $radius-rounded;
 }
 
+
 .container {
 // от 0 до 767px
     padding: 0 30px;
@@ -39,7 +40,7 @@ body {
 
 @media screen and (min-width: $breakpoint-xxl) {
     max-width: 1660px;
-}
+    }
 }
 
 .wrapper {
@@ -49,21 +50,35 @@ body {
     margin-bottom: 80px;
     position: relative;
 
-    &::before,  &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 20px;
-        right: 20px;
-        background:  #CACADB;
-        height: 10px;
-        border-radius: 0px 0px 12px 12px;
+&::before,  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+    background:  #CACADB;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
     }
-    &::after {
-        left: 40px;
-        right: 40px;
-        bottom: -20px;
-        height: 10px;
-        background: #E7E7F2;
+&::after {
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+    height: 10px;
+    background: #E7E7F2;
+    }
+}
+.btn {
+    padding: 18px 30px;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    background: $regular-color;
+    box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+
+    &:hover {
+        background: $hover-coolor;
+    }
+    &:active {
+        background: $active-color;
     }
 }

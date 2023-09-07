@@ -102,6 +102,12 @@
         width: 38px;
         height: 38px;
         fill: $regular-color;
+        transition: fill .3s linear;
+        @media screen and (min-width: $breakpoint-xl){
+            &:hover {
+                fill: $accent-color;
+            }
+        }
     }
 
     &__phone {
@@ -124,8 +130,14 @@
         text-decoration: none;
         display: block;
         margin-bottom: 30px;
+        transition: color .3s linear;
         @media screen and (min-width: $breakpoint-md){
             margin-bottom: 0;
+        }
+        @media screen and (min-width: $breakpoint-xl){
+            &:hover {
+                color: $accent-color;
+            }
         }
     }
 

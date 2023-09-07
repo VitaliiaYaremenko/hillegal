@@ -65,33 +65,33 @@
         }
     }
 
-    &__inner-link {
-        margin-bottom: 5px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 700;
-        color: $regular-color;
-        position: relative;
-        padding-right: 10px;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 9px;
-            height: 9px;
-            top: 3px;
-            right: 0;
-            border-bottom: 2px solid $regular-color;
-            border-right: 2px solid $regular-color;
-            transform:  rotate(-45deg);
-            @media screen and (min-width: $breakpoint-lg) {
-                width: 9px;
-                height: 9px;
-                top: 1px;
-                left: 80px;
-            }
-            }
+&__inner-link {
+    @include base-link;
+    margin-bottom: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    padding-right: 10px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 2px;
+        right: 0;
+        border-bottom: 2px solid $regular-color;
+        border-right: 2px solid $regular-color;
+        transform:  rotate(-45deg);
+    @media screen and (min-width: $breakpoint-lg) {
+    width: 6px;
+    height: 6px;
+    top: 3px;
+    left: 80px;
+        }
     }
+}
 
     &__inner-title {
         @include main-gradient-text($gradient-red-text);
@@ -114,15 +114,13 @@
     &__swiper-pagination {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 7px;
         margin-top: 30px;
-
 
         .swiper-pagination-bullet {
             width: 16px;
             height: 16px;
             background: $regular-color;
-
         }
     }
 }

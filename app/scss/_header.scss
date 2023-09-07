@@ -3,7 +3,7 @@
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
-	background: url('../images/global-symbol.svg') no-repeat center/auto 100%;
+	background: url('../images/logo-imeges/global-symbol.svg') no-repeat center/auto 100%;
 	@media screen and (min-width: $breakpoint-md) {
 		background-size: cover;
 	}
@@ -274,9 +274,6 @@
 		padding: 7px;
 		display: block;
 
-		&:hover {
-			color: $accent-color;
-		}
 		@media screen and (min-width: $breakpoint-md) {
 			border-radius: 0;
 			background: none;
@@ -304,12 +301,25 @@
 		}
 	}
 }
+.fill--accent {
+	transition: fill .3s linear;
+	&:hover {
+		fill: $accent-color;
+	}
+}
 .dotted {
 	display: none;
 	@media screen and (min-width: $breakpoint-md) {
 		display: flex;
 	}
 }
+
+.link--regular {
+	@media screen and (min-width: $breakpoint-md) {
+		color: $regular-color;
+	}
+}
+
 .link--accent { 
 	@media screen and (min-width: $breakpoint-md) {
 		&.active {
@@ -319,10 +329,51 @@
 }
 .item--bg {
 	@media screen and (min-width: $breakpoint-md) {
-		border-bottom: 2px solid $accent-color;
+		border-bottom: 4px solid $accent-color;
 		padding-bottom: 3px;
 	}
 }
+.item--border{
+	@media screen and (min-width: $breakpoint-xl){
+		&:hover{
+			border-bottom: 4px solid $basic-white;
+			padding-bottom: 3px;
+		}
+	}
+}
+.about--border{
+	@media screen and (min-width: $breakpoint-xl){
+		&:hover{
+			border-bottom: 4px solid $regular-color;
+			padding-bottom: 3px;
+		}
+	}
+}
+.logo--color {
+    color:$main-color;
+}
+.bg--item {
+	&:hover{
+		background: rgba(255, 255, 255, 0.20);
+		border-radius: 8px;
+		padding: 5px 7px;
+	}
+}
+.text--grey {
+	color: $text-color;
+}
+.bg--icon {
+	fill: $text-color;
+}
+.grey--bg {
+	background: $bg-color;
+}
+.burger--bg {
+	&::before, &::after, span {
+		background: $main-color;
+	}
+}
+
 
 
 
